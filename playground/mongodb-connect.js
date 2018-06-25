@@ -33,29 +33,6 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
 	});
 
 
-db.createCollection("product", {
-   validator: {
-      $jsonSchema: {
-         bsonType: "object",
-         required: [ "name", "brand", "description", "image" ],
-         properties: {
-            name: {
-               bsonType: "string"
-            },
-            brand: {
-               bsonType: "string"
-            },
-            description: {
-               bsonType: "string"
-            },
-            image: {
-               bsonType: "string"
-            }
-         }
-      }
-   }
-});
-
 	// db.createCollection("Productoo", function(err, result) {
  //        if (err) throw err;
  //        console.log("Collection is created!");
